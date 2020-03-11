@@ -1,5 +1,6 @@
 #include <iostream>
 #include "cli.hpp"
+#include "filesystem.hpp"
 
 using namespace std;
 
@@ -13,6 +14,8 @@ int main(){
             cout << "Enter file: ";
             cin >> file;
             del(file);
+        } else if (command == "help"){
+            help();
         }
     }
     return 0;
