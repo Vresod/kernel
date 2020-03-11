@@ -7,6 +7,7 @@ using namespace std;
 void help() {
     cout << "Much help:" << endl;
     cout << "del [file]" << endl;
+    cout << "cd" << endl;
     cout << "Much nice" << endl;
 }
 

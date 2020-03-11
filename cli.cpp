@@ -16,6 +16,18 @@ int main(){
             del(file);
         } else if (command == "help"){
             help();
+        } else if (command == "cd"){
+            string directory;
+            cout << "Enter directory you want to go to: ";
+            cin >> directory;
+            while (true){
+                string command;
+                cout << cd(directory) + ">";
+                cin >> command;
+            }
+            if (directory == "" || directory == " "){
+                cout << "Unkown dir";
+            }
         }
     }
     return 0;
