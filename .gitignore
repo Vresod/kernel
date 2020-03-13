@@ -1,4 +1,0 @@
-cmake-build-debug/
-CMakeLists.txt
-.gitignore
-# I used the .gitignore to ignore the .gitignore

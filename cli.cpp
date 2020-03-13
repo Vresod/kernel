@@ -1,6 +1,6 @@
 #include <iostream>
 #include "cli.hpp"
-#include "filesystem.hpp"
+#include "changeDirectory.hpp"
 
 using namespace std;
 
@@ -22,7 +22,7 @@ int main(){
             cin >> directory;
             while (true){
                 string command;
-                cout << cd(directory) + ">";
+                cout << changeDir(directory) + ">";
                 cin >> command;
             }
             if (directory == "" || directory == " "){
