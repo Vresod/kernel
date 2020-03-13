@@ -26,10 +26,10 @@ int main(){
                 cin >> command;
             }
             if (directory == "" || directory == " "){
-                cout << "Unkown dir";
+                cout << "Unknown dir";
             }
         } else {
-            cout << "Iincorrect command" << endl;
+            cout << "Incorrect command" << endl;
         }
     }
     return 0;
