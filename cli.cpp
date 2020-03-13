@@ -28,6 +28,8 @@ int main(){
             if (directory == "" || directory == " "){
                 cout << "Unkown dir";
             }
+        } else {
+            cout << "Iincorrect command" << endl;
         }
     }
     return 0;
