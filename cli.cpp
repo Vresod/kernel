@@ -5,6 +5,7 @@
 using namespace std;
 
 int main(){
+    fileSystem fs;
     while (true){
         string command;
         cout << "> ";
@@ -22,7 +23,7 @@ int main(){
             cin >> directory;
             while (true){
                 string command;
-                cout << changeDir(directory) + ">";
+                cout << fs.changeDirectory(directory) + ">";
                 cin >> command;
             }
             if (directory == "" || directory == " "){

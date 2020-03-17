@@ -41,5 +41,6 @@ public:
 		}
 		dir = NULL; // I don't want to leak memory.
 		// if I do, that's not my problem
+		return directory;
 	}
 };
