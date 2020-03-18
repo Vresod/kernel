@@ -25,6 +25,7 @@ int main(){
                 string command;
                 cout << fs.changeDirectory(directory) + ">";
                 cin >> command;
+                break;
             }
             if (directory == "" || directory == " "){
                 cout << "Unknown dir";

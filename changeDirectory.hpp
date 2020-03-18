@@ -31,6 +31,10 @@ public:
 	}
 	// Just a test
 	std::string changeDirectory(std::string directory){
+		return "I'm sorry: this command does not work";
+	}
+
+	std::string changeDirector(std::string directory){
 		std::string* dir;
 		dir = &directory;
 		if (dir){
@@ -41,6 +45,7 @@ public:
 		}
 		dir = NULL; // I don't want to leak memory.
 		// if I do, that's not my problem
-		return directory;
+		std::string direc = directory;
+		return direc;
 	}
 };
