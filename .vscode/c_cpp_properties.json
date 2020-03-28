@@ -3,7 +3,8 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "C:/Users/Nick/AppData/Local/Packages/46932SUSE.openSUSE-Leap-15-1_022rs5jcyhyac/LocalState/rootfs/usr/include/arch-alpha"
             ],
             "defines": [
                 "_DEBUG",
@@ -11,7 +12,7 @@
                 "_UNICODE"
             ],
             "windowsSdkVersion": "10.0.18362.0",
-            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe",
+            "compilerPath": "\"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe\"",
             "cStandard": "c11",
             "cppStandard": "c++20",
             "intelliSenseMode": "${default}"

@@ -1,8 +1,5 @@
-#pragma once
-
 #include <iostream> // Basic library
 #include <cstdio> // Convert strings to char*'s
-#include <Windows.h> // TODO: see if this works on mac/linu
 
 // Define file system first so that we can re-declare it
 // in the future (don't waste time)
