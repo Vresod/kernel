@@ -1,5 +1,6 @@
 #include <iostream> // Basic library
 #include <cstdio> // Convert strings to char*'s
+#include "install.hpp"
 
 // Define file system first so that we can re-declare it
 // in the future (don't waste time)
@@ -45,4 +46,18 @@ public:
 		std::string direc = directory;
 		return direc;
 	}
+};
+
+
+// The background process (what stuff is going to do)
+class backgroundProc {
+	private:
+		// litterally nothing?
+	public:
+		void getCWD() {
+			// TODO: this is currently placeholder code
+		}
+		void instAll() {
+			
+		}
 };
