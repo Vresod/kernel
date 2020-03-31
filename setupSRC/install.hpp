@@ -159,5 +159,8 @@ class status {
 // public modifier.
 public:
   std::string status = "";
-  int percentage;
+  int percentage = 0;
+  void changePercent(){
+    percentage++; // Easy.
+  }
 };
