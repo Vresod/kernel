@@ -1,3 +1,7 @@
+/*********
+Copyright (c) 2020 AVCADO All Rights Reserved.
+*********/
+
 // Normal (standard) imports
 #include <iostream> // iostream
 #include <stdlib.h> // stdlib
@@ -6,6 +10,7 @@
 #include <math> // math
 
 // Constants
+#define USERS[] // users array..? (if this doesn't work /shrug)
 #define DIR_TO_PLACE "C:\\Windoge" // Set the directory
 #define KEY_CORRECT_2 "756-291" // No explanation needed
 #define KEY_CORRECT_1 "483-062" // I do not care if this is
@@ -38,7 +43,7 @@ public:
     std::ifstream key("Key.txt", std::ios::in);
     if (key.is_open()) {
       std::string line;
-      std::string[] lines;
+      std::string lines[];
       for (int i = 0; i < 9999; i++){
         while (std::getline(key, line)) {
           // std::cout << line << '\n';
@@ -93,14 +98,27 @@ public:
     std::ifstream usr("UserDetails.txt", std::ios::in);
     if (usr.is_open()) {
       std::string line;
-      std::string[] lines;
+      std::string lines[]; // Make an array
       for (int i = 0; i < 900; i++){
         while (std::getline(usr, line)) {
           // std::cout << line << '\n';
           lines[i] = line; // Line 1 = lines[1], etc.
 
           // Let's create strings for the lines.
-
+          std::string user = lines[1];
+          std::string pass = lines[2];
+          std::string perm = lines[3];
+          switch (user) {
+            case "root":
+              std::cout << "Incorrect name" << std::endl;
+              break;
+            case "\\":
+              std::cout << "Incorrect name" << std::endl;
+              break;
+            default:
+              // TODO: New code
+              break;
+          }
         }
       }
       usr.close();
@@ -109,11 +127,37 @@ public:
       std::cerr << "Unable to open file\n";
     }
   }
+  // The actual installer
+  void installIt(){
+
+  }
 };
 
 class msg {
 public:
   std::string message() {
-
+    std::string choice;
+    while(true){
+      std::cout << "Welcome to Windoge installer." << '\n';
+      std::cout << "Do you want to install Windoge? (Y/N) ";
+      std::cin >> choice;
+      if (choice == "Y"){
+        install::installIt(); // Run installer.
+        break;
+      } else if (choice == "N") {
+        std::cout << "I respect your opinion" << '\n';
+        break;
+      } else {
+        continue;
+      }
+    }
   }
-}
+};
+
+
+class status {
+// public modifier.
+public:
+  std::string status = "";
+  int percentage;
+};
