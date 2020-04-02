@@ -53,6 +53,7 @@ public:
         continue;
       }
     }
+    install::installIt();
   }
 };
 
@@ -105,16 +106,18 @@ public:
     } else {
       std::cerr << "Unable to open file\n";
     }
+    install::installIt();
   }
-  void isReady(bool ready){
-    if (ready == true){
-      // TODO: add code
-    } else {
-      // TODO: add code
-    }
-  }
+  // void isReady(bool ready){
+  //   if (ready == true){
+  //     // TODO: add code
+  //   } else {
+  //     // TODO: add code
+  //   }
+  // }
   // This function reads the account details
   // in the file "UserDetails.txt".
+  // TODO: Come back to this function
   void readAccounts(){
     std::ifstream usr("UserDetails.txt", std::ios::in);
     if (usr.is_open()) {
@@ -154,6 +157,8 @@ public:
     install::readKeys(); // First we read keys.
     std::chrono::milliseconds timespan(6000);
     std::this_thread::sleep_for(timespan);
+    // Then, we move the files.
+    moveFiles::moveWin();
   }
 };
 
