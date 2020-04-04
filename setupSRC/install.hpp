@@ -14,7 +14,9 @@ Copyright (c) 2020 AVCADO All Rights Reserved.
 
 // Constants
 #define USERS[] // users array..? (if this doesn't work /shrug)
-#define DIR_TO_PLACE "C:\\Windoge" // Set the directory
+#define WIN_DIR_TO_PLACE "C:\\Windoge" // Set the directory
+#define MAC_DIR_TO_PLACE "/usr/bin/windoge" // probably very unethical
+#define NIX_DIR_TO_PLACE MAC_DIR_TO_PLACE // same as MAC?
 #define KEY_CORRECT_2 "756-291" // No explanation needed
 #define KEY_CORRECT_1 "483-062" // I do not care if this is
 // unsecure, it just helps me to do what I need to do...
@@ -41,7 +43,7 @@ class moveFiles {
 public:
   // Public modifier.
   std::string dir = DIR_TO_PLACE; // changable.
-  // this function gets the PRIVILIGES of the user (not needed)
+  // this function moves files for windows
   void moveWin(){
     for (fileNum = 0; fileNum < files.length; fileNum++){
       std::string fileName = "kernel\\" + fileNum[i];
@@ -52,6 +54,20 @@ public:
       } else {
         continue;
       }
+    }
+    install::installIt();
+  }
+
+  void moveMac(){
+    for (fileNum = 0; fileNum < files.length; fileNum++){
+	    std::string fileName = "kernel/" + fileNum[i];
+	    const fileFileName = fileNum[i];
+	    rename(fileName, "/usr/bin/kernel/" + fileNum[i]);
+	    if (fileNUm == files.length){
+		    break;
+	    } else {
+		    continue;
+	    }
     }
     install::installIt();
   }
@@ -140,7 +156,7 @@ public:
               std::cout << "Incorrect name" << std::endl;
               break;
             default:
-              // TODO: New code
+              /w code
               break;
           }
         }
