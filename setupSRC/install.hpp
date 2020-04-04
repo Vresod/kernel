@@ -69,7 +69,7 @@ public:
 		    continue;
 	    }
     }
-    install::installIt();
+    install::installIt()
   }
 };
 
