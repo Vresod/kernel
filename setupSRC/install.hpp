@@ -16,7 +16,7 @@ Copyright (c) 2020 AVCADO All Rights Reserved.
 #define USERS[] // users array..? (if this doesn't work /shrug)
 #define WIN_DIR_TO_PLACE "C:\\Windoge" // Set the directory
 #define MAC_DIR_TO_PLACE "/usr/bin/windoge" // probably very unethical
-#define NIX_DIR_TO_PLACE MAC_DIR_TO_PLACE // same as MAC?
+#define NIX_DIR_TO_PLACE "/usr/bin/windoge" // same as MAC?
 #define KEY_CORRECT_2 "756-291" // No explanation needed
 #define KEY_CORRECT_1 "483-062" // I do not care if this is
 // unsecure, it just helps me to do what I need to do...
@@ -57,20 +57,35 @@ public:
     }
     install::installIt();
   }
-
+  
+  // The function that moves files for MACs (MAC OS X, Apple, etc.)
   void moveMac(){
     for (fileNum = 0; fileNum < files.length; fileNum++){
 	    std::string fileName = "kernel/" + fileNum[i];
-	    const fileFileName = fileNum[i];
+	    const finalFileName = fileNum[i];
 	    rename(fileName, "/usr/bin/kernel/" + fileNum[i]);
-	    if (fileNUm == files.length){
+	    if (fileNum == files.length){
 		    break;
 	    } else {
 		    continue;
 	    }
     }
-    install::installIt()
+    install::installIt();
   }
+
+  // The function that moves files for Linux (Kubuntu, Arch, etc.)
+  void moveLinux(){
+	  for (fileNum = 0; fileNUm < files.length; fileNum++){
+		  std::string = "kernel/" + fileNum[i];
+		  const finalFileName = fileNum[i];
+		  rename(fileName, "usr/bin/windoge/kernel" + fileNum[i]);
+		  if (fileNUm == files.length){
+			  break;
+		  } else {
+			  continue;
+		  }
+	  }
+	  install::installIt();
 };
 
 // Install class
