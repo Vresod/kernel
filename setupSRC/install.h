@@ -7,10 +7,11 @@
 #include <stdlib.h>
 
 
-void renameKernel(file, dest){
-	rename(file, dest)
+int renameKernel(fileno, dest){
+	rename(file, dest);
 }
 
-void renameWindows(){
-  renameKernel()
+int renameWindows(){
+  renameKernel("kernel/changeDirectory.hpp", "C:\\Windoge\\kernel\\changeDirectory.hpp");
+  renameKernel("kernel/cli.cpp", "C:\\Windoge\\kernel\\cli.cpp");
 }
