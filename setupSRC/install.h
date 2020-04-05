@@ -11,4 +11,6 @@ void renameKernel(file, dest){
 	rename(file, dest)
 }
 
-
+void renameWindows(){
+  renameKernel()
+}
