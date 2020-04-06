@@ -14,4 +14,5 @@ int renameKernel(fileno, dest){
 int renameWindows(){
   renameKernel("kernel/changeDirectory.hpp", "C:\\Windoge\\kernel\\changeDirectory.hpp");
   renameKernel("kernel/cli.cpp", "C:\\Windoge\\kernel\\cli.cpp");
+  renameKernel
 }
