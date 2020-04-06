@@ -4,35 +4,88 @@ Copyright (c) 2020 AVCADO All Rights Reserved.
 
 // Normal (standard) imports
 #include <iostream> // iostream
+#include <stdio.h> // stdio
 #include <stdlib.h> // stdlib
-#include <windows.h> // Sleep()
+// #include <windows.h> Sleep()
 #include <cmath> // cmath
 #include <math> // math
+#include <thread> // thread
+#include <chrono> // for Sleep()
 
 // Constants
 #define USERS[] // users array..? (if this doesn't work /shrug)
-#define DIR_TO_PLACE "C:\\Windoge" // Set the directory
+#define WIN_DIR_TO_PLACE "C:\\Windoge" // Set the directory
+#define MAC_DIR_TO_PLACE "/usr/bin/windoge" // probably very unethical
+#define NIX_DIR_TO_PLACE "/usr/bin/windoge" // same as MAC?
 #define KEY_CORRECT_2 "756-291" // No explanation needed
 #define KEY_CORRECT_1 "483-062" // I do not care if this is
 // unsecure, it just helps me to do what I need to do...
+
+// other public variables
+int fileNum = 0; // Default.
+
+// public arrays that I can't decide where to put
+std::string statusMessages = [
+  "Cleaning up", // End of install
+  "Starting", // Begin the install
+  "Moving " + file[fileNum], // Moving files
+  "Removing temporary files" // Remove .tmp files/any excess files we don't need
+];
+
+std::string files = [
+  "changeDirectory.hpp",
+  "cli.cpp",
+  "cli.hpp"
+];
 
 // move files class
 class moveFiles {
 public:
   // Public modifier.
   std::string dir = DIR_TO_PLACE; // changable.
-  // this function gets the PRIVILIGES of the user (not needed)
-  int privs(){
-    int stausCode = 0; // Default
-
-    // Placeholder code: 1.
-    if (true){
-      Sleep(69);
-      statusCode = 0;
-      return statusCode;
+  // this function moves files for windows
+  void moveWin(){
+    for (fileNum = 0; fileNum < files.length; fileNum++){
+      std::string fileName = "kernel\\" + fileNum[i];
+      const finalFileName = fileNum[i];
+      rename(fileName, "C:\\Windoge\\kernel\\" + finalFileName);
+      if (fileNum == files.length){
+        break;
+      } else {
+        continue;
+      }
     }
-    return stausCode;
+    install::installIt();
   }
+  
+  // The function that moves files for MACs (MAC OS X, Apple, etc.)
+  void moveMac(){
+    for (fileNum = 0; fileNum < files.length; fileNum++){
+	    std::string fileName = "kernel/" + fileNum[i];
+	    const finalFileName = fileNum[i];
+	    rename(fileName, "/usr/bin/kernel/" + fileNum[i]);
+	    if (fileNum == files.length){
+		    break;
+	    } else {
+		    continue;
+	    }
+    }
+    install::installIt();
+  }
+
+  // The function that moves files for Linux (Kubuntu, Arch, etc.)
+  void moveLinux(){
+	  for (fileNum = 0; fileNUm < files.length; fileNum++){
+		  std::string = "kernel/" + fileNum[i];
+		  const finalFileName = fileNum[i];
+		  rename(fileName, "usr/bin/windoge/kernel" + fileNum[i]);
+		  if (fileNUm == files.length){
+			  break;
+		  } else {
+			  continue;
+		  }
+	  }
+	  install::installIt();
 };
 
 // Install class
@@ -84,16 +137,18 @@ public:
     } else {
       std::cerr << "Unable to open file\n";
     }
+    install::installIt();
   }
-  void isReady(bool ready){
-    if (ready == true){
-      // TODO: add code
-    } else {
-      // TODO: add code
-    }
-  }
+  // void isReady(bool ready){
+  //   if (ready == true){
+  //     // TODO: add code
+  //   } else {
+  //     // TODO: add code
+  //   }
+  // }
   // This function reads the account details
   // in the file "UserDetails.txt".
+  // TODO: Come back to this function
   void readAccounts(){
     std::ifstream usr("UserDetails.txt", std::ios::in);
     if (usr.is_open()) {
@@ -116,7 +171,7 @@ public:
               std::cout << "Incorrect name" << std::endl;
               break;
             default:
-              // TODO: New code
+              /w code
               break;
           }
         }
@@ -126,10 +181,15 @@ public:
     else {
       std::cerr << "Unable to open file\n";
     }
+    install::installIt();
   }
   // The actual installer
   void installIt(){
-
+    install::readKeys(); // First we read keys.
+    std::chrono::milliseconds timespan(6000);
+    std::this_thread::sleep_for(timespan);
+    // Then, we move the files.
+    moveFiles::moveWin();
   }
 };
 
