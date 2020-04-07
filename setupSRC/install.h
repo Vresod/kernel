@@ -1,6 +1,6 @@
 /***********************
  * COPYRIGHT AVCADO 2020
- * 
+ * All rights reserved.
  **********************/
 
 #include <stdio.h>
@@ -8,11 +8,25 @@
 
 
 int renameKernel(fileno, dest){
-	rename(file, dest);
+	if ( !rename(file, dest) ) {
+    return 1;
+  }
+  return 0;
 }
 
-int renameWindows(){
+void renameWindows(){
   renameKernel("kernel/changeDirectory.hpp", "C:\\Windoge\\kernel\\changeDirectory.hpp");
   renameKernel("kernel/cli.cpp", "C:\\Windoge\\kernel\\cli.cpp");
-  renameKernel
+  renameKernel("kernel/cli.hpp", "C:\\Windoge\\kernel\\cli.hpp");
+}
+
+
+void renameMac(){
+   renameKernel("kernel/changeDirectory.hpp", "/usr/bin/windoge/changeDirectory.hpp");
+   renameKernel("kernel/cli.cpp", "/usr/bin/windoge/cli.cpp");
+   renameKernel("kernel/cli.hpp", "/usr/bin/windoge/cli.hpp");
+}
+
+void renameUnix(){
+  renameMac();
 }
