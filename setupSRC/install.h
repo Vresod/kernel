@@ -15,9 +15,12 @@ int renameKernel(fileno, dest){
 }
 
 void renameWindows(){
+  // The standard kernel files.
   renameKernel("kernel/changeDirectory.hpp", "C:\\Windoge\\kernel\\changeDirectory.hpp");
   renameKernel("kernel/cli.cpp", "C:\\Windoge\\kernel\\cli.cpp");
   renameKernel("kernel/cli.hpp", "C:\\Windoge\\kernel\\cli.hpp");
+  // The documentation
+  
 }
 
 
