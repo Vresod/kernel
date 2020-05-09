@@ -1,0 +1,22 @@
+[ WINDOGE DOCUMENTATION ]
+
+cd - change directory
+
+Use this only when needed, to change from
+one directory to the other.
+
+It is mainly used to go to the home directory ('/').
+There are certain restrictions on what you cannot do.
+
+Here are some of the restrictions:
+
+'\n' creates a new line (no folder will be called this)
+'\t' makes a tab.
+and any other escape codes.
+
+
+---------------------------------------------------------
+                    THIS DOCUMENTATION
+                  WAS WRITTEN BY AVCADO
+                 ON THIS DATE: APR 7, '20
+---------------------------------------------------------
