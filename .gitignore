@@ -1,0 +1,3 @@
+toolchain/build/build-gcc/gcc-cc1
+toolchain/build/build-gcc/gcc/lto1
+toolchain/build/gcc-9.2.0.tar.gz
