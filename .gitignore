@@ -2,3 +2,4 @@ build/build-gcc/gcc-cc1
 build/build-gcc/gcc/lto1
 build/gcc-9.2.0.tar.gz
 build/
+i686-elf-cross/
